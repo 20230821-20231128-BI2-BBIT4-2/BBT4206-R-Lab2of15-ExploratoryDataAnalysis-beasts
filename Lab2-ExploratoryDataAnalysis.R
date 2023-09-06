@@ -4,10 +4,10 @@
 # Course Code: BBT4206
 # Course Name: Business Intelligence II
 # Semester Duration: 21st August 2023 to 28th November 2023
-#
+#333
 # Lecturer: Allan Omondi
 # Contact: aomondi [at] strathmore.edu
-#
+#  
 # Note: The lecture contains both theory and practice. This file forms part of
 #       the practice. It has required lab work submissions that are graded for
 #       coursework marks.
