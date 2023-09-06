@@ -21,6 +21,7 @@
 # The renv package helps you create reproducible environments for your R
 # projects. This is helpful when working in teams because it makes your R
 # projects more isolated, portable and reproducible.
+#deezsnuts
 
 # Further reading:
 #   Summary: https://rstudio.github.io/renv/
