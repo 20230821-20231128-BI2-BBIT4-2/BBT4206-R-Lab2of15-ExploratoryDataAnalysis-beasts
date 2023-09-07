@@ -28,6 +28,7 @@
 #   More detailed article: https://rstudio.github.io/renv/articles/renv.html
 
 # Install renv:
+
 if (!is.element("renv", installed.packages()[, 1])) {
   install.packages("renv", dependencies = TRUE)
 }
@@ -199,6 +200,7 @@ sapply(PimaIndiansDiabetes, class)
 boston_housing_freq <- BostonHousing$chas
 cbind(frequency = table(boston_housing_freq),
       percentage = prop.table(table(boston_housing_freq)) * 100)
+
 
 crop_dataset_density_freq <- crop_dataset$density
 cbind(frequency = table(crop_dataset_density_freq),
