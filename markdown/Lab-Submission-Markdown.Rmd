@@ -110,5 +110,6 @@ Describe the next code chunk here: command to display dimensions
 ```{r Your 4th Code Chunk}
 dim(student_performance_dataset)
 ```
+...
 
 **etc.** as per the lab submission requirements.
