@@ -16,7 +16,7 @@ editor_options:
 # Student Details
 
 |                                                   |                                                                                            |
-|---------------------------------------------------|--------------------------------------------------------------------------------------------|
+|--------------------------|----------------------------------------------|
 | **Student ID Numbers and Names of Group Members** | \<list one student name and ID per line; you should be between 2 and 5 members per group\> |
 | **BBIT 4.2 Group**                                | \<either group A, B, or C\>                                                                |
 | **Course Code**                                   | BBT4206                                                                                    |
@@ -102,17 +102,13 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.CSV",
 Describe the next code chunk here:
 
 ```{r Your Third Code Chunk}
-# Fill this with other R related code that will be executed when the R markdown
-# file is rendered using knitR
-library(readr)
+ sapply(student_performance_dataset, class)
 ```
 
 ## \<You Can Have a Sub-Title Here\>
 
-```{r Your Fourth Code Chunk}
-# Fill this with other R related code that will be executed when the R markdown
-# file is rendered using knitR
-library(readr)
+```{r Your 4th Code Chunk}
+dim(student_performance_dataset)
 ```
 
 **etc.** as per the lab submission requirements.
