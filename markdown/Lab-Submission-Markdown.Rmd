@@ -67,7 +67,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, eval = TRUE,
 ***Describe the code chunk here:*** Commands to loading Dataset
 
 ```{r Your Second Code Chunk}
-student_performance_dataset <- readr::read_csv("data/StudentPerformance.CSV",
+student_performance_dataset <- readr::read_csv("data/StudentPerformance.csv",
     col_types = readr::cols(class_group = readr::col_factor(levels = c("A", "B",
         "C")), gender = readr::col_factor(levels = c("1", "0")), YOB = readr::col_date(format = "%Y"),
         regret_choosing_bi = readr::col_factor(levels = c("1", "0")), drop_bi_now = readr::col_factor(levels = c("1",
@@ -112,8 +112,15 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.CSV",
     locale = readr::locale())
 ```
 
+```{r Your 16th Code Chunk}
+```
+
+# Dimensions
+
+**Describe the next code chunk here:** command to identify the data types:
 
 ```{r Your 16th Code Chunk}
+dim(student_performance_dataset)
 ```
 
 **etc.** as per the lab submission requirements.
