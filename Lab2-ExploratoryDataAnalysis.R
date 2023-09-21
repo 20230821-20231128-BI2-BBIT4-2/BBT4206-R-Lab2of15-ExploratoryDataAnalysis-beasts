@@ -870,4 +870,4 @@ renv::snapshot()
 
 # Upload *the link* to "Lab-Submission-Markdown.md" (not .Rmd)
 # markdown file hosted on Github (do not upload the .Rmd or .md markdown files)
-# through the submission link provided on eLearning.
+# through the submission link provided on eLearning.!
