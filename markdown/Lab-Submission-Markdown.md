@@ -1,74 +1,55 @@
-Business Intelligence Lab Submission Markdown
-================
-<Specify your name here>
-<Specify the date when you submitted the lab>
+# Business Intelligence Lab Submission Markdown
 
-- [Student Details](#student-details)
-- [Setup Chunk](#setup-chunk)
-- [Loading Dataset](#loading-dataset)
+<Specify your name here> <Specify the date when you submitted the lab>
 
-# Student Details
+-   [Student Details](#student-details)
+-   [Setup Chunk](#setup-chunk)
+-   [Loading Dataset](#loading-dataset)
 
-<table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Student ID Numbers and Names of Group Members</strong></td>
-<td><p>131038 Doreen Muema</p>
-<p>19630 Venus Karanja</p>
-<p>135844 Mercy Macharia</p>
-<p>Ryan Shuma</p>
-<p>Bill Akide</p></td>
-</tr>
-<tr class="even">
-<td><strong>BBIT 4.2 Group</strong></td>
-<td>A,A,A,B,C</td>
-</tr>
-<tr class="odd">
-<td><strong>Course Code</strong></td>
-<td>BBT4206</td>
-</tr>
-<tr class="even">
-<td><strong>Course Name</strong></td>
-<td>Business Intelligence II</td>
-</tr>
-<tr class="odd">
-<td><strong>Program</strong></td>
-<td>Bachelor of Business Information Technology</td>
-</tr>
-<tr class="even">
-<td><strong>Semester Duration</strong></td>
-<td>21<sup>st</sup> August 2023 to 28<sup>th</sup> November 2023</td>
-</tr>
-</tbody>
-</table>
+# Student Details {#student-details}
 
-# Setup Chunk
++---------------------------------------------------+---------------------------------------------+
+| **Student ID Numbers and Names of Group Members** | 131038 Doreen Muema                         |
+|                                                   |                                             |
+|                                                   | 19630 Venus Karanja                         |
+|                                                   |                                             |
+|                                                   | 135844 Mercy Macharia                       |
+|                                                   |                                             |
+|                                                   | Ryan Shuma                                  |
+|                                                   |                                             |
+|                                                   | Bill Akide                                  |
++---------------------------------------------------+---------------------------------------------+
+| **BBIT 4.2 Group**                                | A,A,A,B,C                                   |
++---------------------------------------------------+---------------------------------------------+
+| **Course Code**                                   | BBT4206                                     |
++---------------------------------------------------+---------------------------------------------+
+| **Course Name**                                   | Business Intelligence II                    |
++---------------------------------------------------+---------------------------------------------+
+| **Program**                                       | Bachelor of Business Information Technology |
++---------------------------------------------------+---------------------------------------------+
+| **Semester Duration**                             | 21^st^ August 2023 to 28^th^ November 2023  |
++---------------------------------------------------+---------------------------------------------+
 
-**Note:** the following KnitR options have been set as the global
-defaults:  
+# Setup Chunk {#setup-chunk}
+
+**Note:** the following KnitR options have been set as the global defaults:\
 `knitr::opts_chunk$set(echo = TRUE, warning = FALSE, eval = TRUE,                        collapse = FALSE, tidy = TRUE)`.
 
-> output:  
->   
-> github_document:  
-> toc: yes  
-> toc_depth: 4  
-> fig_width: 6  
-> fig_height: 4  
-> df_print: default  
->   
-> editor_options:  
+> output:
+>
+> github_document:\
+> toc: yes\
+> toc_depth: 4\
+> fig_width: 6\
+> fig_height: 4\
+> df_print: default
+>
+> editor_options:\
 > chunk_output_type: console
 
-More KnitR options are documented here
-<https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html> and
-here <https://yihui.org/knitr/options/>.
+More KnitR options are documented here <https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html> and here <https://yihui.org/knitr/options/>.
 
-# Loading Dataset
+# Loading Dataset {#loading-dataset}
 
 ***Describe the code chunk here:*** Commands to loading Dataset
 
