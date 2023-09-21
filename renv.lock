@@ -1401,13 +1401,14 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "utils"
-      ],
-      "Hash": "4b22ac016fe54028b88d0c68badbd061"
+      "Version": "1.0.2.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rstudio",
+      "RemoteRepo": "renv",
+      "RemoteRef": "main",
+      "RemoteSha": "437f165bdc7eca273e7e2e96ac5e128c6d07c181"
     },
     "reshape2": {
       "Package": "reshape2",
