@@ -112,15 +112,19 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.csv",
     locale = readr::locale())
 ```
 
-```{r Your 16th Code Chunk}
-```
-
 # Dimensions
 
 **Describe the next code chunk here:** command to identify the data types:
 
-```{r Your 16th Code Chunk}
+```{r Your 3th Code Chunk}
 dim(student_performance_dataset)
 ```
+
+```{r Your 16th Code Chunk}
+```
+
+```{r Your 16th Code Chunk}
+```
+
 
 **etc.** as per the lab submission requirements.
