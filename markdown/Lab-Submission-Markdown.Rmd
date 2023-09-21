@@ -99,14 +99,14 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.CSV",
     locale = readr::locale())
 ```
 
-Describe the next code chunk here:
+Describe the next code chunk here: command to display datatypes
 
 ```{r Your Third Code Chunk}
  sapply(student_performance_dataset, class)
 ```
 
 ## \<You Can Have a Sub-Title Here\>
-
+Describe the next code chunk here: command to display dimensions
 ```{r Your 4th Code Chunk}
 dim(student_performance_dataset)
 ```
