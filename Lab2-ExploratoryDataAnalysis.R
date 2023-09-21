@@ -32,7 +32,6 @@
 if (!is.element("renv", installed.packages()[, 1])) {
   install.packages("renv", dependencies = TRUE)
 }
-
 require("renv")
 
 # Use renv::init() to initialize renv in a new or existing project.
@@ -219,6 +218,7 @@ cbind(frequency = table(crop_dataset_fertilizer_freq),
 iris_dataset_freq <- iris_dataset$V5
 cbind(frequency = table(iris_dataset_freq),
       percentage = prop.table(table(iris_dataset_freq)) * 100)
+
 
 pima_indians_diabetes_freq <- PimaIndiansDiabetes$diabetes
 cbind(frequency = table(pima_indians_diabetes_freq),
