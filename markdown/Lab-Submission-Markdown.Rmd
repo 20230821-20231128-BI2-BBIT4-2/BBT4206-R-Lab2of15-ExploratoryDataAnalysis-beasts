@@ -114,17 +114,19 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.csv",
 
 # Dimensions
 
-**Describe the next code chunk here:** command to identify the data types:
+***Describe the next code chunk here:*** Commands to display the dimensions of the datasets
 
 ```{r Your 3th Code Chunk}
 dim(student_performance_dataset)
 ```
 
-```{r Your 16th Code Chunk}
+***Describe the next code chunk here:*** Command to identify the data types:
+
+```{r Your 3rd Code Chunk}
+sapply(student_performance_dataset, class)
 ```
 
 ```{r Your 16th Code Chunk}
 ```
-
 
 **etc.** as per the lab submission requirements.
