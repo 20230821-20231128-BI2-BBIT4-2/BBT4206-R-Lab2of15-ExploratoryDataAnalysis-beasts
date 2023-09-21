@@ -4,7 +4,7 @@
 # Course Code: BBT4206
 # Course Name: Business Intelligence II
 # Semester Duration: 21st August 2023 to 28th November 2023
-#
+#333
 # Lecturer: Allan Omondi
 # Contact: aomondi [at] strathmore.edu
 #
@@ -22,14 +22,17 @@
 # projects. This is helpful when working in teams because it makes your R
 # projects more isolated, portable and reproducible.
 
+
 # Further reading:
 #   Summary: https://rstudio.github.io/renv/
 #   More detailed article: https://rstudio.github.io/renv/articles/renv.html
 
 # Install renv:
+
 if (!is.element("renv", installed.packages()[, 1])) {
   install.packages("renv", dependencies = TRUE)
 }
+
 require("renv")
 
 # Use renv::init() to initialize renv in a new or existing project.
@@ -174,6 +177,7 @@ sapply(PimaIndiansDiabetes, class)
 #   https://digitaschools.com/descriptive-statistics-skewness-and-kurtosis/
 # Further reading: https://www.scribbr.com/statistics/skewness/
 
+
 # 4. Measures of relationship
 # (e.g., covariance, correlation, ANOVA)
 
@@ -198,6 +202,7 @@ sapply(PimaIndiansDiabetes, class)
 boston_housing_freq <- BostonHousing$chas
 cbind(frequency = table(boston_housing_freq),
       percentage = prop.table(table(boston_housing_freq)) * 100)
+
 
 crop_dataset_density_freq <- crop_dataset$density
 cbind(frequency = table(crop_dataset_density_freq),
