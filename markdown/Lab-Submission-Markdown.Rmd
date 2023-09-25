@@ -22,7 +22,7 @@ editor_options:
 |                                                   |                                             |
 |                                                   | 135844 Mercy Macharia                       |
 |                                                   |                                             |
-|                                                   | Ryan Shuma                                  |
+|                                                   | 104135 Ryan Shuma                           |
 |                                                   |                                             |
 |                                                   | Bill Akide                                  |
 +---------------------------------------------------+---------------------------------------------+
@@ -192,7 +192,7 @@ print(standard_deviation)
 
 # Inferential Statistics
 
-## Perform ANOVA 
+## Perform ANOVA
 
 ***Describe the next code chunk here:***code is conducting a two-way Analysis of Variance (ANOVA) to analyze the effects of two categorical independent variables, class_group and gender, on the dependent variable Average Course Evaluation Rating.
 
@@ -282,4 +282,3 @@ ggplot(student_performance_dataset, aes(x = study_time, y = `Average Course Eval
 ```{r Your 14th Code Chunk}
 renv::snapshot()
 ```
-
