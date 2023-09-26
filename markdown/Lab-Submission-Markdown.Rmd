@@ -22,7 +22,7 @@ editor_options:
 |                                                   |                                             |
 |                                                   | 135844 Mercy Macharia                       |
 |                                                   |                                             |
-|                                                   | Ryan Shuma                                  |
+|                                                   | 104135 Ryan Shuma                           |
 |                                                   |                                             |
 |                                                   | Bill Akide                                  |
 +---------------------------------------------------+---------------------------------------------+
@@ -120,13 +120,165 @@ student_performance_dataset <- readr::read_csv("data/StudentPerformance.csv",
 dim(student_performance_dataset)
 ```
 
-***Describe the next code chunk here:*** Command to identify the data types:
+# Data Types
 
-```{r Your 3rd Code Chunk}
-sapply(student_performance_dataset, class)
+***Describe the next code chunk here:*** Command to identify the data types
+
+```{r Your 4th Code Chunk}
+result <- sapply(student_performance_dataset, class)
+for (i in seq_along(result)) {
+  cat(sprintf("%-50s %s\n", names(result)[i], result[[i]]))
+}
+
+
 ```
 
-```{r Your 16th Code Chunk}
+# Descriptive Statistics
+
+## Measures of Frequency
+
+***Describe the next code chunk here:*** is used to calculate and display the frequency and percentage distribution of the "gender" variable in the "student_performance_dataset."
+
+```{r Your 5th Code Chunk}
+gender_freq <- student_performance_dataset$gender
+cbind(frequency = table(gender_freq),
+    percentage = prop.table(table(gender_freq)) * 100)
 ```
 
-**etc.** as per the lab submission requirements.
+## Measures of Central Tendency
+
+***Describe the next code chunk here:*** calculates the mode (most frequent value) of the "EXAM: x/60 (60%)" column in the "student_performance_dataset" and prints the result.
+
+```{r Your 6th Code Chunk}
+student_performance_dataset_mode <- names(table(student_performance_dataset$`EXAM: x/60 (60%)`))[
+  which(table(student_performance_dataset$`EXAM: x/60 (60%)`) == max(table(student_performance_dataset$`EXAM: x/60 (60%)`)))
+]
+print(student_performance_dataset_mode)
+```
+
+## Measures of Distribution/Dispersion/Spread/Scatter/Variability
+
+```{r Your 7th Code Chunk}
+summary(student_performance_dataset)
+```
+
+### Measure the variance
+
+***Describe the next code chunk here:*** calculates the variance of each numeric column, disregarding missing values (NAs), and t
+
+```{r Your 8th Code Chunk}
+library(dplyr)
+library(tidyr)
+
+numeric_columns <- student_performance_dataset %>%
+  select_if(is.numeric)
+
+variance_df <- numeric_columns %>%
+  summarise_all(~ var(., na.rm = TRUE)) %>%
+  pivot_longer(everything(), names_to = "Column", values_to = "Variance")
+
+print(variance_df, n = Inf)
+```
+
+### Measure the standard deviation
+
+***Describe the next code chunk here:*** calculates the standard deviation for "EXAM: x/60 (60%)" column
+
+```{r Your 9th Code Chunk}
+standard_deviation <- sd(student_performance_dataset$`EXAM: x/60 (60%)`, na.rm = TRUE)
+
+print(standard_deviation)
+```
+
+# Inferential Statistics
+
+## Perform ANOVA
+
+***Describe the next code chunk here:***code is conducting a two-way Analysis of Variance (ANOVA) to analyze the effects of two categorical independent variables, class_group and gender, on the dependent variable Average Course Evaluation Rating.
+
+```{r Your 10th Code Chunk}
+student_performance_dataset_anova <- aov(`Average Course Evaluation Rating` ~ class_group + gender, data = student_performance_dataset)
+
+summary(student_performance_dataset_anova)
+
+```
+
+# Qualitative Data Analysis
+
+## Univariate Plots
+
+### Create Histograms
+
+***Describe the next code chunk here:*** code generates histograms for three different variables ("project_score," "exam_score," and "course_score")
+
+```{r Your 11th Code Chunk}
+project_score <- as.numeric(student_performance_dataset$`Project: (10%): x/30 x 100 TOTAL`)
+exam_score <- as.numeric(student_performance_dataset$`EXAM: x/60 (60%)`)
+course_score <- as.numeric(student_performance_dataset$`Coursework TOTAL: x/40 (40%)`)
+
+course_score <- course_score[!is.na(course_score)]
+
+par(mfrow = c(2, 2))
+
+# Create a histogram for study time
+hist(project_score, 
+     main = "Histogram of Project Scores",
+     xlab = "Project Scores",
+     ylab = "Frequency",
+     col = "skyblue",  
+     border = "black",  
+     breaks = 10) 
+
+# Create a histogram for exam scores
+hist(exam_score, 
+     main = "Histogram of Exam Scores",
+     xlab = "Exam Scores",
+     ylab = "Frequency",
+     col = "green",  
+     border = "black",  
+     breaks = 10) 
+
+# Create a histogram for quiz scores (after removing missing values)
+hist(course_score, 
+     main = "Histogram of Quiz Scores",
+     xlab = "Quiz Scores",
+     ylab = "Frequency",
+     col = "orange",  
+     border = "black",  
+     breaks = 10)  
+
+```
+
+### Missingness Map
+
+***Describe the next code chunk here:***checks for missing data patterns in the "student_performance_dataset"
+
+```{r Your 12th Code Chunk}
+if (!is.element("Amelia", installed.packages()[, 1])) {
+  install.packages("Amelia", dependencies = TRUE)
+}
+require("Amelia")
+
+# Create a missing data pattern plot for student_performance_dataset
+missmap(student_performance_dataset, col = c("red", "green"), legend = TRUE)
+```
+
+## Multivariate Plots
+
+### Create a Scatter Plot
+
+***Describe the next code chunk here:*** creates a scatter plot that visualizes the relationship between "Study Time" and "Average Course Evaluation Rating" for the dataset
+
+```{r Your 13th Code Chunk}
+library(ggplot2)
+
+ggplot(student_performance_dataset, aes(x = study_time, y = `Average Course Evaluation Rating`)) +
+  geom_point() +
+  labs(x = "Study Time", y = "Average Course Evaluation Rating") +
+  ggtitle("Scatter Plot: Study Time vs. Average Course Evaluation Rating")
+
+```
+
+```{r Your 14th Code Chunk}
+renv::snapshot()
+```
